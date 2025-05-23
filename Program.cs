@@ -96,10 +96,14 @@ class Program
         FoodItem banana = new FoodItem("Banan", 105);
         FoodItem oatmeal = new FoodItem("Płatki owsiane", 150);
         FoodItem chicken = new FoodItem("Kurczak", 200);
+        FoodItem bread = new FoodItem("Chleb", 50);
+        FoodItem tomato = new FoodItem("Pomidor", 30);
 
         Meal breakfast = new Meal("Śniadanie");
         breakfast.AddFood(banana);
         breakfast.AddFood(oatmeal);
+        breakfast.AddFood(bread);
+        breakfast.AddFood(tomato);
 
         Meal dinner = new Meal("Obiad");
         dinner.AddFood(chicken);
