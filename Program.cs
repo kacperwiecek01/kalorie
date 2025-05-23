@@ -67,4 +67,23 @@ class DailyIntake
     {
         Meals.Add(meal);
     }
+    public int GetDailyCalories()
+    {
+        int total = 0;
+        foreach (var meal in Meals)
+        {
+            total += meal.GetTotalCalories();
+        }
+        return total;
+    }
+
+    public void DisplayDailySummary()
+    {
+        Console.WriteLine("=== PODSUMOWANIE DNIA ===");
+        foreach (var meal in Meals)
+        {
+            meal.DisplayMealInfo();
+        }
+        Console.WriteLine($"RAZEM DZIŚ: {GetDailyCalories()} kcal");
+    }
 }
