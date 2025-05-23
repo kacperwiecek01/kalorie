@@ -54,3 +54,17 @@ class Meal
         Console.WriteLine($"Łącznie: {GetTotalCalories()} kcal\n");
     }
 }
+class DailyIntake
+{
+    public List<Meal> Meals { get; set; }
+
+    public DailyIntake()
+    {
+        Meals = new List<Meal>();
+    }
+
+    public void AddMeal(Meal meal)
+    {
+        Meals.Add(meal);
+    }
+}
