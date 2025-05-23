@@ -87,3 +87,27 @@ class DailyIntake
         Console.WriteLine($"RAZEM DZIŚ: {GetDailyCalories()} kcal");
     }
 }
+
+class Program
+{
+    static void Main()
+    {
+        // Przykładowe użycie
+        FoodItem banana = new FoodItem("Banan", 105);
+        FoodItem oatmeal = new FoodItem("Płatki owsiane", 150);
+        FoodItem chicken = new FoodItem("Kurczak", 200);
+
+        Meal breakfast = new Meal("Śniadanie");
+        breakfast.AddFood(banana);
+        breakfast.AddFood(oatmeal);
+
+        Meal dinner = new Meal("Obiad");
+        dinner.AddFood(chicken);
+
+        DailyIntake today = new DailyIntake();
+        today.AddMeal(breakfast);
+        today.AddMeal(dinner);
+
+        today.DisplayDailySummary();
+    }
+}
