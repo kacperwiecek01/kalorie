@@ -45,13 +45,13 @@ class Meal
 
     public void DisplayMealInfo()
     {
-        Console.WriteLine($"Posiłek: {Name}");
-        Console.WriteLine("Składniki:");
+        Console.WriteLine($"\nPosiłek:\n {Name}");
+        Console.WriteLine("\nSkładniki:");
         foreach (var food in FoodItems)
         {
             food.DisplayInfo();
         }
-        Console.WriteLine($"Łącznie: {GetTotalCalories()} kcal\n");
+        Console.WriteLine($"\nŁącznie: {GetTotalCalories()} kcal\n");
     }
 }
 class DailyIntake
@@ -99,7 +99,7 @@ class Program
         FoodItem bread = new FoodItem("Chleb", 50);
         FoodItem tomato = new FoodItem("Pomidor", 30);
 
-        Meal breakfast = new Meal("Śniadanie");
+        Meal breakfast = new Meal("\nŚniadanie");
         breakfast.AddFood(banana);
         breakfast.AddFood(oatmeal);
         breakfast.AddFood(bread);
